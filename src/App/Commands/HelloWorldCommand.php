@@ -11,7 +11,10 @@ class HelloWorldCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('hello-world')->setDescription('Prints Hello-World!')->setHelp('Demo of custom commands')->addArgument('username', InputArgument::REQUIRED, 'Pass the username');
+        $this->setName('hello-world')
+            ->setDescription('Prints Hello-World!')
+            ->setHelp('Demo of custom commands')
+            ->addArgument('username', InputArgument::REQUIRED, 'Pass the username');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
